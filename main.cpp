@@ -46,6 +46,11 @@ int readInt(string prompt) {
     cout << prompt << endl;
     int input = 0;
     cin >> input;
+    while (input < 0 || input > 10) {
+        cout << "Invalid input please retry!" << endl;
+        cout << prompt;
+        cin >> input;
+    }
     return input;
 }
 double readScore(string prompt) {
@@ -177,7 +182,7 @@ char letterGrade;
 
 C. CALCULATIONS
 calcFinalScore(averageScore, midScore, finalScore);
-calcLetterGrade(totalgrade)
+calcLetterGrade(totalgrade);
 
 
 
@@ -221,6 +226,27 @@ Enter score 6: 2.5
 Enter your midterm exam score: 3.5
 Enter your final exam score: 4
 Your Final Numeric score is 3.4
+Your Final Grade is A
+Thanks for using my program!
+
+Welcome to my final grade calculator!
+Please enter the following information and I will calculate your Final Numerical Grade and Letter Grade for you!
+The number of assignments must be between 0 and 10.
+All scores entered must be between 0 and 4.
+Enter the number of assignments (0 to 10): 
+12
+Invalid input please retry!
+Enter the number of assignments (0 to 10): 5
+Enter score 1: 3.4
+Enter score 2: 4
+Enter score 3: 2.5
+Enter score 4: 5.5
+Invalid input please retry
+Enter score 4: 3.5
+Enter score 5: 3.1
+Enter your midterm exam score: 3.5
+Enter your final exam score: 4
+Your Final Numeric score is 3.5
 Your Final Grade is A
 Thanks for using my program!
 
